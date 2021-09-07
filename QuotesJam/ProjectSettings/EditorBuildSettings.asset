@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level01.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/QuoteJam.unity
+    guid: 150a167ffa6e201419be9f7ba99acd50
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 4e591f289d995014c94080771bfa43e3
   m_configObjects: {}
