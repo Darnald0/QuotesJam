@@ -7,4 +7,12 @@ public class Credits : MonoBehaviour
     {
         SceneManager.LoadScene("MainMenu");
     }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            LoadMainMenu();
+        }
+    }
 }
