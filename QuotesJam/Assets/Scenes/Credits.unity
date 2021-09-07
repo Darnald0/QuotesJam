@@ -195,7 +195,8 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: "Nom du Jeu\n\nGameJam Quotes\n\nTeam 10\n\nGame Programming :\n\nSAUTEREAU
     T\xE9o A2\n\nDU David A4\n\nMALKA Romain A2\n\nGame Design:\n\nJELMONI Mathis
-    A3\n"
+    A3\n\nESCOFFIER Thomas A5\n\nGame Art:\n\nRASSON Lucas\n\nProject Management:\n\nDELOBEL
+    Romain MBA\n\nDJOEHANA Argha A4\n\nSound:\n\nTitle theme\n\nMain theme\n"
 --- !u!222 &229340452
 CanvasRenderer:
   m_ObjectHideFlags: 0
