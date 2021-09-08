@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     private Collider kickHitBox;
     private Vector3 movement;
     private Rigidbody rb;
+    public Camera mainCamera;
     private bool isKicking = false;
     private float timeKickEnd;
 
@@ -58,6 +59,19 @@ public class PlayerController : MonoBehaviour
         {
             Kick();
         }
+
+        Ray cameraRay = mainCamera.ScreenPointToRay(Input.mousePosition);
+        Plane groundPlane = new Plane(Vector3.up, Vector3.zero);
+        float rayLenght;
+
+        if(groundPlane.Raycast(cameraRay, out rayLenght))
+        {
+            Vector3 pointToLook = cameraRay.GetPoint(rayLenght);
+            Debug.DrawLine(cameraRay.origin, pointToLook, Color.yellow);
+
+            transform.LookAt(new Vector3(pointToLook.x, transform.position.y, pointToLook.z));
+        }
+
     }
 
     private void Kick()
