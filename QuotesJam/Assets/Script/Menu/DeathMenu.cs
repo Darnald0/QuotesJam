@@ -13,6 +13,7 @@ public class DeathMenu : MonoBehaviour
     public void RetryButton()
     {
         //PlayerHealth.instance.Respawn();
+
         DeathScreen.SetActive(false);
     }
 
