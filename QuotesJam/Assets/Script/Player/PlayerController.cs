@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float speed = 20.0f;
     [SerializeField] private float limiter = 0.7f;
-    [SerializeField] private float kickRange = 1.0f;
+    public float kickStrength = 10.0f;
     [SerializeField] private float kickCoolDown = 1.0f;
     [SerializeField] private float kickDuration = 0.5f;
 
