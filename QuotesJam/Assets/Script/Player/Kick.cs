@@ -5,10 +5,13 @@ using UnityEngine;
 public class Kick : MonoBehaviour
 {
     private float strength = 10.0f;
+    private int damage = 1;
+    public EnnemyLife ennemyLife;
 
     private void Awake()
     {
         PlayerController player = gameObject.GetComponentInParent(typeof(PlayerController)) as PlayerController;
+        ennemyLife = GameObject.FindGameObjectWithTag("Enemy").GetComponent<EnnemyLife>();
         strength = player.kickStrength;
     }
 
@@ -17,6 +20,7 @@ public class Kick : MonoBehaviour
         if (other.tag == "Enemy")
         {
             Debug.Log("touch");  
+            ennemyLife.Die(damage);
             Rigidbody enemyRigidBody = other.gameObject.GetComponent<Rigidbody>();
             if (enemyRigidBody != null)
             {

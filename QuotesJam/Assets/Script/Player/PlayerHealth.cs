@@ -43,7 +43,7 @@ public class PlayerHealth : MonoBehaviour
 
     public void Die(){
         
-        
+        Debug.Log("Mort");
         PlayerController.instance.enabled = false;
         PlayerController.instance.rb.isKinematic = true;
         PlayerController.instance.playerCollider.enabled = false;

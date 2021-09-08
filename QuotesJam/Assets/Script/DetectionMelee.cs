@@ -6,6 +6,7 @@ using System;
 public class DetectionMelee : MonoBehaviour
 {
     public bool detectionPlayer = false;
+    public int damage = 1;
     private DateTime nextDamage;
     public float fightAfterTime;
     void Start()
@@ -43,7 +44,7 @@ public class DetectionMelee : MonoBehaviour
         if(nextDamage <= DateTime.Now)
         {
             Debug.Log("Touché");
-            PlayerHealth.instance.TakeDamage(1);
+            PlayerHealth.instance.TakeDamage(damage);
             nextDamage = DateTime.Now.AddSeconds(System.Convert.ToDouble(fightAfterTime));
         }
     }
