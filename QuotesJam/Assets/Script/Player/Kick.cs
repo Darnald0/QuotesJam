@@ -22,6 +22,8 @@ public class Kick : MonoBehaviour
     {
         if (other.tag == "Enemy")
         {
+            EnnemyLife ennemy = other.gameObject.GetComponent<EnnemyLife>();
+            ennemy.Die(1); 
             Rigidbody enemyRigidBody = other.gameObject.GetComponent<Rigidbody>();
             if (enemyRigidBody != null)
             {
