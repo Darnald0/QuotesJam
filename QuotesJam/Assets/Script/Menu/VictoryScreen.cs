@@ -7,6 +7,7 @@ public class VictoryScreen : MonoBehaviour
 
     public void victoryCondition()
     {
+        // condition de victoire = mort de tout les ennemies
         victoryScreen.SetActive(true);
     }
 }
