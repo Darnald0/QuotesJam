@@ -43,6 +43,7 @@ public class DetectionMelee : MonoBehaviour
         if(nextDamage <= DateTime.Now)
         {
             Debug.Log("Touché");
+            PlayerHealth.instance.TakeDamage(1);
             nextDamage = DateTime.Now.AddSeconds(System.Convert.ToDouble(fightAfterTime));
         }
     }
