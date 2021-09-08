@@ -217,7 +217,7 @@ Transform:
   m_LocalScale: {x: 3.3067, y: 3.3067, z: 3.3067}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &332708436
 PrefabInstance:
@@ -236,7 +236,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1030286207274191, guid: e7e64ae814b1d5346922fa490b867e79, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1030286207274191, guid: e7e64ae814b1d5346922fa490b867e79, type: 3}
       propertyPath: m_LocalPosition.x
@@ -294,7 +294,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8467306649561396772, guid: e552e13f035e84a4a9959d72175d7d19, type: 3}
       propertyPath: m_Name
-      value: Ennemi (1)
+      value: Choco
       objectReference: {fileID: 0}
     - target: {fileID: 8467306649561396776, guid: e552e13f035e84a4a9959d72175d7d19, type: 3}
       propertyPath: m_RootOrder
@@ -557,6 +557,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ennemi
       objectReference: {fileID: 0}
+    - target: {fileID: 8467306649561396772, guid: e552e13f035e84a4a9959d72175d7d19, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8467306649561396776, guid: e552e13f035e84a4a9959d72175d7d19, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -703,7 +707,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &985244847
 GameObject:
@@ -763,7 +767,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1140570924
 PrefabInstance:
@@ -1008,7 +1012,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!114 &1306964032
 MonoBehaviour:

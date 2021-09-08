@@ -25,7 +25,7 @@ public class EnnemyLife : MonoBehaviour
 
        if(life <= 0)
        {
-           Debug.Log("EneMort");
+            Debug.Log("EneMort");
             enemyDetector.enabled = false;
             rb.isKinematic = true;
             enemyCollider.enabled = false;
