@@ -13,17 +13,30 @@ public class PlayerController : MonoBehaviour
     private float cd;
     private Collider kickHitBox;
     private Vector3 movement;
-    private Rigidbody rb;
+    public Rigidbody rb;
+    public CapsuleCollider playerCollider;
+    public MeshRenderer meshRenderer;
     public Camera mainCamera;
     private bool isKicking = false;
     private float timeKickEnd;
+    public static PlayerController instance;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
+        playerCollider = GetComponent<CapsuleCollider>();
+        meshRenderer = GetComponent<MeshRenderer>();
         kickHitBox = transform.GetChild(0).GetComponent<BoxCollider>();
         Debug.Log(kickHitBox);
         cd = kickCoolDown;
+
+        if(instance != null)
+        {
+            Debug.LogWarning("Il y a plus d'une instance de PlayerHealth dans la scène");
+            return;
+        }
+
+        instance = this;
     }
 
     private void FixedUpdate()

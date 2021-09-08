@@ -33,10 +33,14 @@ public class EnemyDetector : MonoBehaviour
         }
        
 
-        if(follow == true && Vector3.Distance(transform.position, target.transform.position) >= 2) 
+        if(follow == true && Vector3.Distance(transform.position, target.transform.position) >= 1) 
         {
             agent.SetDestination(target.transform.position);
 
+            if(PlayerHealth.instance.playerLife <= 0)
+            {
+                follow = false;
+            }
         }
         else 
         {
