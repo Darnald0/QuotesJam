@@ -216,7 +216,6 @@ GameObject:
   - component: {fileID: 466889203}
   - component: {fileID: 466889202}
   - component: {fileID: 466889201}
-  - component: {fileID: 466889207}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -238,9 +237,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 20
   limiter: 0.7
-  kickRange: 1
+  kickStrength: 10
   kickCoolDown: 1
   kickDuration: 0.5
+  shakeDuration: 1
+  shake:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.024261475
+      value: 0.0007019043
+      inSlope: 1.9627554
+      outSlope: 1.9627554
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.07323095
+    - serializedVersion: 3
+      time: 1.0231018
+      value: -0.0028533936
+      inSlope: -0.11774208
+      outSlope: -0.11774208
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.8508842
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  mainCamera: {fileID: 730321296}
 --- !u!54 &466889202
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -334,20 +359,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &466889207
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 466889200}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b3e8cce32542bcd408c6a2cdfa428bcd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  characterCollider: {fileID: 466889203}
-  characterBlockerCollider: {fileID: 0}
 --- !u!1 &584825988
 GameObject:
   m_ObjectHideFlags: 0
@@ -438,6 +449,7 @@ GameObject:
   - component: {fileID: 730321297}
   - component: {fileID: 730321296}
   - component: {fileID: 730321295}
+  - component: {fileID: 730321298}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -510,6 +522,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 45, y: 0, z: 0}
+--- !u!114 &730321298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 730321294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70555f62838e44e449080794bf158312, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &744441046
 GameObject:
   m_ObjectHideFlags: 0
@@ -567,6 +591,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc43a545ec77f1141b1bcb7507d52c05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cameraShake: {fileID: 730321298}
 --- !u!1 &788782894
 GameObject:
   m_ObjectHideFlags: 0
@@ -692,8 +717,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3e8cce32542bcd408c6a2cdfa428bcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterCollider: {fileID: 788782895}
-  characterBlockerCollider: {fileID: 0}
 --- !u!1 &814062288
 GameObject:
   m_ObjectHideFlags: 0
