@@ -44,7 +44,7 @@ public class PlayerController : MonoBehaviour
         if(groundPlane.Raycast(cameraRay, out rayLenght))
         {
             Vector3 pointToLook = cameraRay.GetPoint(rayLenght);
-            Debug.DrawLine(cameraRay.origin, pointToLook, Color.red);
+            Debug.DrawLine(cameraRay.origin, pointToLook, Color.yellow);
 
             transform.LookAt(new Vector3(pointToLook.x, transform.position.y, pointToLook.z));
         }
