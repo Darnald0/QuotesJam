@@ -5,15 +5,16 @@ public class DeathMenu : MonoBehaviour
 {
     public GameObject DeathScreen;
 
-    public void OnPlayerDeath()
+    /*public void OnPlayerDeath()
     {
         DeathScreen.SetActive(true);
-    }
+    }*/
 
     public void RetryButton()
     {
         //PlayerHealth.instance.Respawn();
-
+        Time.timeScale = 1;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         DeathScreen.SetActive(false);
     }
 
