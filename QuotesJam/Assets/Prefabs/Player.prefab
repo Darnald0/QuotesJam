@@ -104,6 +104,13 @@ MonoBehaviour:
   kickStrength: 10
   kickCoolDown: 1
   kickDuration: 0.5
+  shakeDuration: 1
+  shake:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   rb: {fileID: 0}
   playerCollider: {fileID: 0}
   meshRenderer: {fileID: 0}
@@ -150,7 +157,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc43a545ec77f1141b1bcb7507d52c05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ennemyLife: {fileID: 8467306649561396781, guid: e552e13f035e84a4a9959d72175d7d19, type: 3}
+  cameraShake: {fileID: 0}
 --- !u!114 &1030286207274189
 MonoBehaviour:
   m_ObjectHideFlags: 0
