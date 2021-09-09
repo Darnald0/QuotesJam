@@ -104,10 +104,46 @@ MonoBehaviour:
   kickStrength: 10
   kickCoolDown: 1
   kickDuration: 0.5
-  shakeDuration: 1
+  shakeDuration: 0.5
   shake:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1.0024719
+      inSlope: -2.7729278
+      outSlope: -2.7729278
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.28158766
+      value: 0.2216497
+      inSlope: -1.3515393
+      outSlope: -1.3515393
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.17332883
+    - serializedVersion: 3
+      time: 0.55334014
+      value: 0.009149874
+      inSlope: 0.008804988
+      outSlope: 0.008804988
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.2306446
+    - serializedVersion: 3
+      time: 1.0035553
+      value: 0.0039183795
+      inSlope: -0.020996943
+      outSlope: -0.020996943
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.3552526
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
