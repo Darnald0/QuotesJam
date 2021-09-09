@@ -196,7 +196,7 @@ MonoBehaviour:
   target: {fileID: 0}
   player:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
   rb: {fileID: 8467306649561396780}
 --- !u!195 &8467306649561396779
 NavMeshAgent:
