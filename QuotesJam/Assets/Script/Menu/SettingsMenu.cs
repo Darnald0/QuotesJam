@@ -11,6 +11,8 @@ public class SettingsMenu : MonoBehaviour
 
     private Resolution[] resolutions;
 
+    public GameObject settingsWindow;
+
     public void Start()
     {
         resolutions = Screen.resolutions;
@@ -25,6 +27,14 @@ public class SettingsMenu : MonoBehaviour
         }
 
         resolutionDropDown.AddOptions(options);
+    }
+
+    public void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            settingsWindow.SetActive(false);
+        }
     }
 
     public void SetVolume(float volume)
