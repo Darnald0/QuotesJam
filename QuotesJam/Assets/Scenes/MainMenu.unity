@@ -1084,7 +1084,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 563c94e80d3c111499e02e5c86c5bdcf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameScene: QuoteJam
+  nameScene: Level01
   settingsWindow: {fileID: 940567330}
 --- !u!1 &1313916407
 GameObject:

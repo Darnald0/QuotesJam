@@ -12,6 +12,8 @@ public class PlayerHealth : MonoBehaviour
     public static PlayerHealth instance;
     public GameObject deathScreen;
 
+    public SkinnedMeshRenderer mesh;
+
     private void Awake(){
         if(instance != null)
         {
@@ -48,7 +50,7 @@ public class PlayerHealth : MonoBehaviour
         PlayerController.instance.enabled = false;
         PlayerController.instance.rb.isKinematic = true;
         PlayerController.instance.playerCollider.enabled = false;
-        PlayerController.instance.meshRenderer.enabled = false;
+        mesh.enabled = false;
         Time.timeScale = 0;
         deathScreen.SetActive(true);
     }

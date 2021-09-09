@@ -18,6 +18,7 @@ public class EnemyDetector : MonoBehaviour
 
     void Start()
     {
+        target = GameObject.FindGameObjectWithTag("Player");
         agent = GetComponent<NavMeshAgent>();
         player = LayerMask.GetMask("Player");
         rb = GetComponent<Rigidbody>();
@@ -50,9 +51,6 @@ public class EnemyDetector : MonoBehaviour
         //     // rb.angularVelocity = Vector3.zero;
         //     agent.SetDestination(transform.position);
         // }
-
-        
-
         
     }
 

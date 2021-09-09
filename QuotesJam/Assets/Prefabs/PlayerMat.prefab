@@ -782,7 +782,7 @@ GameObject:
   - component: {fileID: 4780640321602062814}
   m_Layer: 0
   m_Name: PlayerMat
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -894,6 +894,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  anim: {fileID: 0}
   kickHitBox: {fileID: 4780640321831340865}
   rb: {fileID: 0}
   playerCollider: {fileID: 0}

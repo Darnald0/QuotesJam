@@ -178,6 +178,7 @@ MonoBehaviour:
   meleeCollider: {fileID: 8467306648790361390}
   meshRenderer: {fileID: 8467306649561396774}
   enemyDetector: {fileID: 8467306649561396778}
+  score: {fileID: 0}
 --- !u!114 &8467306649561396778
 MonoBehaviour:
   m_ObjectHideFlags: 0
