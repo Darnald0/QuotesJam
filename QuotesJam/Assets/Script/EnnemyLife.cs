@@ -10,6 +10,8 @@ public class EnnemyLife : MonoBehaviour
     public BoxCollider meleeCollider;
     public MeshRenderer meshRenderer;
     public EnemyDetector enemyDetector;
+
+    public Score score;
    
    public void Awake()
    {
@@ -32,6 +34,10 @@ public class EnnemyLife : MonoBehaviour
             enemyCollider.enabled = false;
             meleeCollider.enabled = false;
             meshRenderer.enabled = false;
-       }
+            StopCoroutine(score.Combo());
+            StartCoroutine(score.Combo());
+            score.scoreValue += 10 * score.multiplier;
+        }
    }
+    
 }

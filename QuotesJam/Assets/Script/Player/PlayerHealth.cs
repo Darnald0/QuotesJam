@@ -49,6 +49,7 @@ public class PlayerHealth : MonoBehaviour
         PlayerController.instance.rb.isKinematic = true;
         PlayerController.instance.playerCollider.enabled = false;
         PlayerController.instance.meshRenderer.enabled = false;
+        Time.timeScale = 0;
         deathScreen.SetActive(true);
     }
     public void Respawn()
