@@ -10,6 +10,13 @@ public class loadspecificscene : MonoBehaviour
     
     public string Level;
 
+    public void Start()
+    {
+        AudioManager.instance.Stop("MenuMusic");
+        AudioManager.instance.Play("BgMusic");
+    }
+
+
     private void OnTriggerEnter(Collider collision){
         if(collision.CompareTag("Player")){
            SceneManager.LoadScene(Level);
