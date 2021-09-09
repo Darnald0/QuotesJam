@@ -15,10 +15,10 @@ public class PlayerController : MonoBehaviour
     private float cd;
     [SerializeField] private Collider kickHitBox;
     private Vector3 movement;
-    public Rigidbody rb;
-    public CapsuleCollider playerCollider;
-    public MeshRenderer meshRenderer;
-    public Camera mainCamera;
+    [HideInInspector] public Rigidbody rb;
+    [HideInInspector] public CapsuleCollider playerCollider;
+    [HideInInspector] public MeshRenderer meshRenderer;
+    [HideInInspector] public Camera mainCamera;
     private bool isKicking = false;
     private float timeKickEnd;
     public static PlayerController instance;
