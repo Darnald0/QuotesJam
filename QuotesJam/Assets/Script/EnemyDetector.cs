@@ -9,6 +9,7 @@ public class EnemyDetector : MonoBehaviour
     public Color rayColor;
     private RaycastHit raycastHit;
     private bool follow;
+    public float speed = 0;
 
     public NavMeshAgent agent;
     public GameObject target;
@@ -33,8 +34,9 @@ public class EnemyDetector : MonoBehaviour
         }
        
 
-        if(follow == true && Vector3.Distance(transform.position, target.transform.position) >= 1) 
+        if(follow == true) //&& Vector3.Distance(transform.position, target.transform.position) >= 1
         {
+        
             agent.SetDestination(target.transform.position);
 
             if(PlayerHealth.instance.playerLife <= 0)
@@ -42,12 +44,13 @@ public class EnemyDetector : MonoBehaviour
                 follow = false;
             }
         }
-        else 
-        {
-            // rb.velocity = Vector3.zero;
-            // rb.angularVelocity = Vector3.zero;
-            agent.SetDestination(transform.position);
-        }
+        // else 
+        // {
+        //     // rb.velocity = Vector3.zero;
+        //     // rb.angularVelocity = Vector3.zero;
+        //     agent.SetDestination(transform.position);
+        // }
+
         
 
         
