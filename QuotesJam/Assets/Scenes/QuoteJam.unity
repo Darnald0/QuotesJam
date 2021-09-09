@@ -1705,6 +1705,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: 1
+  rb: {fileID: 0}
+  enemyCollider: {fileID: 0}
+  meleeCollider: {fileID: 0}
+  meshRenderer: {fileID: 0}
+  enemyDetector: {fileID: 0}
 --- !u!54 &786488185
 Rigidbody:
   m_ObjectHideFlags: 0
