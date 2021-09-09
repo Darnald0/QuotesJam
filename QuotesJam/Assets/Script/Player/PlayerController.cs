@@ -77,7 +77,7 @@ public class PlayerController : MonoBehaviour
             if (cd <= 0)
             {
                 isKicking = true;
-                
+                AudioManager.instance.Play("KickLeger");
                 timeKickEnd = Time.time + kickDuration;
             }
         }

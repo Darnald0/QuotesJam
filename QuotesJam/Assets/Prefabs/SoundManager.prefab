@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5911509851962146765}
-  - component: {fileID: 5911509851962146766}
   - component: {fileID: 5911509851962146764}
+  - component: {fileID: 8935809079533983266}
   m_Layer: 0
   m_Name: SoundManager
   m_TagString: Untagged
@@ -32,47 +32,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5911509851962146766
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5911509851962146767}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be7a67573e388ef47b8f8e612c386146, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _volumeToggle: 0
-  Music: {fileID: 0}
-  SFX: {fileID: 5911509851962146764}
-  Clips:
-  - <Name>k__BackingField: BgMusic
-    <File>k__BackingField: {fileID: 8300000, guid: 7863bb41eef013847b6c0e8e8f0e0eee, type: 3}
-  - <Name>k__BackingField: destruction
-    <File>k__BackingField: {fileID: 8300000, guid: 8d5da347905621748aa479a816a76abc, type: 3}
-  - <Name>k__BackingField: Die
-    <File>k__BackingField: {fileID: 8300000, guid: c88ccfa102ba0b74ca40e9ae59063c92, type: 3}
-  - <Name>k__BackingField: HitLegers
-    <File>k__BackingField: {fileID: 8300000, guid: a091028636590ab4d91750b58f82a4b5, type: 3}
-  - <Name>k__BackingField: HitMoyen
-    <File>k__BackingField: {fileID: 8300000, guid: d91b3c6762d19a841a885a4c6db5a3f4, type: 3}
-  - <Name>k__BackingField: HitLourd
-    <File>k__BackingField: {fileID: 8300000, guid: ab93b3fa1ca7baa4182833eb4d1dcbe7, type: 3}
-  - <Name>k__BackingField: HitPlayer
-    <File>k__BackingField: {fileID: 8300000, guid: cf391ed6ebf877e49902b4e828410bad, type: 3}
-  - <Name>k__BackingField: ShowScore
-    <File>k__BackingField: {fileID: 8300000, guid: 8507f54011690a14f8a736216536f6d8, type: 3}
-  - <Name>k__BackingField: KickLeger
-    <File>k__BackingField: {fileID: 8300000, guid: 9ec4cb2e70e078a4da12570c08176537, type: 3}
-  - <Name>k__BackingField: KickLourd
-    <File>k__BackingField: {fileID: 8300000, guid: bbaac9fa4545e6945bf346e42a07459d, type: 3}
-  - <Name>k__BackingField: Grenade
-    <File>k__BackingField: {fileID: 8300000, guid: b5cdad67df2a6014d814405d093c7fe7, type: 3}
-  - <Name>k__BackingField: MenuPrincipal
-    <File>k__BackingField: {fileID: 8300000, guid: ac4459a4cecf2794eb289c1244ffaa96, type: 3}
-  SubbedClips: []
 --- !u!82 &5911509851962146764
 AudioSource:
   m_ObjectHideFlags: 0
@@ -169,3 +128,95 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &8935809079533983266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5911509851962146767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 575399443c798904f966e9e185aa5e1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Destruction
+    clip: {fileID: 8300000, guid: 8d5da347905621748aa479a816a76abc, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    CouldCrossfade: 0
+    source: {fileID: 0}
+  - name: Die
+    clip: {fileID: 8300000, guid: c88ccfa102ba0b74ca40e9ae59063c92, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    CouldCrossfade: 0
+    source: {fileID: 0}
+  - name: Grenade
+    clip: {fileID: 8300000, guid: b5cdad67df2a6014d814405d093c7fe7, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    CouldCrossfade: 0
+    source: {fileID: 0}
+  - name: HitLourd
+    clip: {fileID: 8300000, guid: ab93b3fa1ca7baa4182833eb4d1dcbe7, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    CouldCrossfade: 0
+    source: {fileID: 0}
+  - name: HitLeger
+    clip: {fileID: 8300000, guid: 15b3fd88df88a9c439fbab5a8df79015, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    CouldCrossfade: 0
+    source: {fileID: 0}
+  - name: HitMoyen
+    clip: {fileID: 8300000, guid: d91b3c6762d19a841a885a4c6db5a3f4, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    CouldCrossfade: 0
+    source: {fileID: 0}
+  - name: HitPlayer
+    clip: {fileID: 8300000, guid: 8d5da347905621748aa479a816a76abc, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    CouldCrossfade: 0
+    source: {fileID: 0}
+  - name: ShowScore
+    clip: {fileID: 8300000, guid: 8507f54011690a14f8a736216536f6d8, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    CouldCrossfade: 0
+    source: {fileID: 0}
+  - name: KickLeger
+    clip: {fileID: 8300000, guid: 9ec4cb2e70e078a4da12570c08176537, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    CouldCrossfade: 0
+    source: {fileID: 0}
+  - name: KickLourd
+    clip: {fileID: 8300000, guid: bbaac9fa4545e6945bf346e42a07459d, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    CouldCrossfade: 0
+    source: {fileID: 0}
+  - name: BgMusic
+    clip: {fileID: 8300000, guid: 7863bb41eef013847b6c0e8e8f0e0eee, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    CouldCrossfade: 0
+    source: {fileID: 0}
+  soundDecrease: 0.1
+  musicPlayingName: 

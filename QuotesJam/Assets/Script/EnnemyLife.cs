@@ -15,11 +15,11 @@ public class EnnemyLife : MonoBehaviour
    
    public void Awake()
    {
-    //    rb = GetComponent<Rigidbody>();
-    //    enemyCollider = GetComponent<BoxCollider>();
-    //    meleeCollider = transform.GetChild(0).GetComponent<BoxCollider>();
-    //    meshRenderer = GetComponent<MeshRenderer>();
-    //    enemyDetector = GetComponent<EnemyDetector>();
+       rb = GetComponent<Rigidbody>();
+       enemyCollider = GetComponent<BoxCollider>();
+       meleeCollider = transform.GetChild(0).GetComponent<BoxCollider>();
+       meshRenderer = GetComponent<MeshRenderer>();
+       enemyDetector = GetComponent<EnemyDetector>();
    }
    public void Die(int damage)
    {
@@ -28,7 +28,7 @@ public class EnnemyLife : MonoBehaviour
        if(life <= 0)
        {
             Debug.Log("EneMort");
-            SoundManager.Instance.PlaySFX("HitLegers");
+            AudioManager.instance.Play("HitLeger");
             enemyDetector.enabled = false;
             rb.isKinematic = true;
             enemyCollider.enabled = false;

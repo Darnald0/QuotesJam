@@ -33,6 +33,7 @@ public class PlayerHealth : MonoBehaviour
     
     public void TakeDamage(int damage){
         playerLife -=damage;
+        AudioManager.instance.Play("HitPlayer");
  
         if(playerLife <= 0) 
         {
@@ -44,7 +45,7 @@ public class PlayerHealth : MonoBehaviour
     public void Die(){
         
         Debug.Log("Mort");
-        SoundManager.Instance.PlaySFX("Die");
+        AudioManager.instance.Play("Die");
         PlayerController.instance.enabled = false;
         PlayerController.instance.rb.isKinematic = true;
         PlayerController.instance.playerCollider.enabled = false;
