@@ -6,7 +6,7 @@ public class Kick : MonoBehaviour
 {
     private float strength = 10.0f;
     private float duration;
-    [SerializeField] private CameraShake cameraShake;
+    private CameraShake cameraShake;
 
     private AnimationCurve shakeIntensity;
 
@@ -16,6 +16,7 @@ public class Kick : MonoBehaviour
         strength = player.kickStrength;
         duration = player.shakeDuration;
         shakeIntensity = player.shake;
+        cameraShake = GameObject.Find("Main Camera").GetComponent<CameraShake>();
     }
 
     private void OnTriggerEnter(Collider other)
