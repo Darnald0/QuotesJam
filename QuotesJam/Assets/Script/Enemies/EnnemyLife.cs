@@ -12,11 +12,11 @@ public class EnnemyLife : MonoBehaviour
 
     public SkinnedMeshRenderer mesh;
 
-    public GameObject score;
+    public Score score;
    
    public void Awake()
    {
-        score = GameObject.FindGameObjectWithTag("Score");
+        score = GameObject.FindGameObjectWithTag("Score").GetComponent<Score>();
         rb = GetComponent<Rigidbody>();
         enemyCollider = GetComponent<BoxCollider>();
         meleeCollider = transform.GetChild(0).GetComponent<BoxCollider>();
@@ -30,14 +30,15 @@ public class EnnemyLife : MonoBehaviour
        {
             Debug.Log("EneMort");
             AudioManager.instance.Play("HitLeger");
-            enemyDetector.enabled = false;
-            rb.isKinematic = true;
-            enemyCollider.enabled = false;
-            meleeCollider.enabled = false;
-            mesh.enabled = false;
+            //enemyDetector.enabled = false;
+            //rb.isKinematic = true;
+            //enemyCollider.enabled = false;
+            //meleeCollider.enabled = false;
+            //mesh.enabled = false;
             StopCoroutine(score.Combo());
             StartCoroutine(score.Combo());
             score.scoreValue += 10 * score.multiplier;
+            Destroy(gameObject);
         }
    }
     
