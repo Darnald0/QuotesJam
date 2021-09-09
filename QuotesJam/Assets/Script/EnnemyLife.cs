@@ -31,6 +31,7 @@ public class EnnemyLife : MonoBehaviour
             enemyCollider.enabled = false;
             meleeCollider.enabled = false;
             meshRenderer.enabled = false;
+            Score.scoreValue += 10;
        }
    }
 }
