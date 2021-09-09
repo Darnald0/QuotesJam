@@ -44,7 +44,7 @@ public class PlayerHealth : MonoBehaviour
     public void Die(){
         
         Debug.Log("Mort");
-        //SoundManager.Instance.PlaySFX("Die");
+        SoundManager.Instance.PlaySFX("Die");
         PlayerController.instance.enabled = false;
         PlayerController.instance.rb.isKinematic = true;
         PlayerController.instance.playerCollider.enabled = false;

@@ -10,6 +10,8 @@ public class EnnemyLife : MonoBehaviour
     public BoxCollider meleeCollider;
     public MeshRenderer meshRenderer;
     public EnemyDetector enemyDetector;
+
+    public Score score;
    
    public void Awake()
    {
@@ -26,13 +28,16 @@ public class EnnemyLife : MonoBehaviour
        if(life <= 0)
        {
             Debug.Log("EneMort");
-            //SoundManager.Instance.PlaySFX("HitLeger");
+            SoundManager.Instance.PlaySFX("HitLeger");
             enemyDetector.enabled = false;
             rb.isKinematic = true;
             enemyCollider.enabled = false;
             meleeCollider.enabled = false;
             meshRenderer.enabled = false;
-            Score.scoreValue += 10;
-       }
+            StopCoroutine(score.Combo());
+            StartCoroutine(score.Combo());
+            score.scoreValue += 10 * score.multiplier;
+        }
    }
+    
 }

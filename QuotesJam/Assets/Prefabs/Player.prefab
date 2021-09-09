@@ -102,7 +102,7 @@ MonoBehaviour:
   speed: 20
   limiter: 0.7
   kickStrength: 10
-  kickCoolDown: 1
+  kickCoolDown: 0.5
   kickDuration: 0.5
   shakeDuration: 0.5
   shake:

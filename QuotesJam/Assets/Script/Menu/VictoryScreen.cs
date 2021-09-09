@@ -1,15 +1,20 @@
 using UnityEngine.SceneManagement;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class VictoryScreen : MonoBehaviour
 {
     public GameObject victoryScreen;
 
-    public void victoryCondition()
+    public GameObject gameUI;
+
+    public void Update() //remettre nom de void pour victoire
     {
-        // condition de victoire = mort de tout les ennemies
-        victoryScreen.SetActive(true);
-
-
+        if (Input.GetKeyDown(KeyCode.V))
+        {
+            gameUI.SetActive(false);
+            // condition de victoire = mort de tout les ennemies
+            victoryScreen.SetActive(true);
+        }
     }
 }
