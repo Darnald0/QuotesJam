@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
     private bool isKicking = false;
     private float timeKickEnd;
     public static PlayerController instance;
+   
 
     private void Awake()
     {
@@ -65,6 +66,7 @@ public class PlayerController : MonoBehaviour
             if (cd <= 0)
             {
                 isKicking = true;
+                 SoundManager.Instance.PlaySFX("KickLeger");
                 
                 timeKickEnd = Time.time + kickDuration;
             }

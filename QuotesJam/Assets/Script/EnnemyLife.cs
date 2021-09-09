@@ -26,6 +26,7 @@ public class EnnemyLife : MonoBehaviour
        if(life <= 0)
        {
             Debug.Log("EneMort");
+            SoundManager.Instance.PlaySFX("HitLeger");
             enemyDetector.enabled = false;
             rb.isKinematic = true;
             enemyCollider.enabled = false;
