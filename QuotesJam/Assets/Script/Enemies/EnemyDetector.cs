@@ -24,7 +24,7 @@ public class EnemyDetector : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
         enemyRay = new Ray(transform.position, transform.forward*10);
         Debug.DrawRay(transform.position, transform.forward*10, rayColor);
