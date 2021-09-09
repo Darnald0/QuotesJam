@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_shader_table
+  m_Name: M_Table
   m_Shader: {fileID: 4800000, guid: 7f50d1ec77e2cc9459ca9d36924ffc53, type: 3}
   m_ShaderKeywords: BACKSOLID BOTTOMSOLID FRONTSOLID LEFTSOLID RIGHTSOLID TOPSOLID
     _AOUV_UV0 _GRADIENTSPACE_WORLD_SPACE _GRADSETTINGS_B_USE_GLOBAL _GRADSETTINGS_D_USE_GLOBAL
@@ -142,7 +142,7 @@ Material:
     - _ShowLMap: 0
     - _ShowLeft: 1
     - _ShowRight: 1
-    - _ShowTexture: 0
+    - _ShowTexture: 1
     - _ShowTop: 1
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
@@ -155,12 +155,12 @@ Material:
     - _AOColor: {r: 0, g: 0, b: 0, a: 1}
     - _AmbientColor: {r: 0, g: 0, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Color1_B: {r: 0.5647059, g: 0.41960788, b: 0.25882354, a: 1}
-    - _Color1_D: {r: 0.5647059, g: 0.41960788, b: 0.25882354, a: 1}
-    - _Color1_F: {r: 0.5647059, g: 0.41960788, b: 0.25882354, a: 1}
-    - _Color1_L: {r: 0.2735849, g: 0.21053264, b: 0.14066394, a: 1}
-    - _Color1_R: {r: 0.27450982, g: 0.21176472, b: 0.14117648, a: 1}
-    - _Color1_T: {r: 0.5647059, g: 0.41960788, b: 0.25882354, a: 1}
+    - _Color1_B: {r: 0.13333334, g: 0.03137255, b: 0.019607844, a: 1}
+    - _Color1_D: {r: 0.13333334, g: 0.03137255, b: 0.019607844, a: 1}
+    - _Color1_F: {r: 0.29411766, g: 0.07450981, b: 0.050980397, a: 1}
+    - _Color1_L: {r: 0.13207549, g: 0.031022452, b: 0.018066933, a: 1}
+    - _Color1_R: {r: 0.13333334, g: 0.03137255, b: 0.019607844, a: 1}
+    - _Color1_T: {r: 0.29411766, g: 0.07450981, b: 0.050980397, a: 1}
     - _Color2_B: {r: 1, g: 1, b: 1, a: 1}
     - _Color2_D: {r: 1, g: 1, b: 1, a: 1}
     - _Color2_F: {r: 1, g: 1, b: 1, a: 1}

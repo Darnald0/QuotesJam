@@ -110,7 +110,7 @@ Material:
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
-    - _OtherSettings: 0
+    - _OtherSettings: 1
     - _Parallax: 0.02
     - _RealtimeShadow: 0
     - _RimEnable: 0
@@ -131,19 +131,19 @@ Material:
     - _Shading_T: 1
     - _ShadowBlend: 0
     - _ShadowInfluence: 0
-    - _ShowAO: 0
+    - _ShowAO: 1
     - _ShowAmbientSettings: 0
     - _ShowBack: 1
     - _ShowBottom: 1
-    - _ShowColorCorrection: 0
+    - _ShowColorCorrection: 1
     - _ShowCustomShading: 1
-    - _ShowFog: 0
+    - _ShowFog: 1
     - _ShowFront: 1
     - _ShowGlobalGradientSettings: 0
-    - _ShowLMap: 0
+    - _ShowLMap: 1
     - _ShowLeft: 1
     - _ShowRight: 1
-    - _ShowTexture: 0
+    - _ShowTexture: 1
     - _ShowTop: 1
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
