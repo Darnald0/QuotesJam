@@ -6,24 +6,40 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float speed = 20.0f;
     [SerializeField] private float limiter = 0.7f;
-    [SerializeField] private float kickRange = 1.0f;
-    [SerializeField] private float kickCoolDown = 1.0f;
+    public float kickStrength = 10.0f;
+    [SerializeField] private float kickCoolDown = 0.5f;
     [SerializeField] private float kickDuration = 0.5f;
+    public float shakeDuration;
+    public AnimationCurve shake;
 
     private float cd;
-    private Collider kickHitBox;
+    [SerializeField] private Collider kickHitBox;
     private Vector3 movement;
-    private Rigidbody rb;
+    public Rigidbody rb;
+    public CapsuleCollider playerCollider;
+    public MeshRenderer meshRenderer;
     public Camera mainCamera;
     private bool isKicking = false;
     private float timeKickEnd;
+    public static PlayerController instance;
+    private Animator animator;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
-        kickHitBox = transform.GetChild(0).GetComponent<BoxCollider>();
+        playerCollider = GetComponent<CapsuleCollider>();
+        meshRenderer = GetComponent<MeshRenderer>();
+        animator = GetComponent<Animator>();
         Debug.Log(kickHitBox);
         cd = kickCoolDown;
+        mainCamera = GameObject.Find("Main Camera").GetComponent<Camera>();
+        if(instance != null)
+        {
+            Debug.LogWarning("Il y a plus d'une instance de PlayerHealth dans la scène");
+            return;
+        }
+
+        instance = this;
     }
 
     private void FixedUpdate()
@@ -32,16 +48,25 @@ public class PlayerController : MonoBehaviour
         {
             movement.x *= limiter;
             movement.z *= limiter;
-
         }
 
-        rb.velocity = new Vector3(movement.x * speed, movement.y, movement.z * speed);
+        //rb.velocity = new Vector3(movement.x * speed, movement.y, movement.z * speed);
+        rb.velocity = new Vector3(movement.x * speed * Time.deltaTime, movement.y, movement.z * speed * Time.deltaTime);
+
     }
 
     void Update()
     {
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.z = Input.GetAxisRaw("Vertical");
+
+        if (movement.x != 0 || movement.z != 0)
+        {
+            animator.SetBool("isRunning", true);
+        } else
+        {
+            animator.SetBool("isRunning", false);
+        }
 
         cd -= Time.deltaTime;
 
@@ -50,7 +75,8 @@ public class PlayerController : MonoBehaviour
             if (cd <= 0)
             {
                 isKicking = true;
-
+                 SoundManager.Instance.PlaySFX("KickLeger");
+                
                 timeKickEnd = Time.time + kickDuration;
             }
         }
@@ -81,8 +107,11 @@ public class PlayerController : MonoBehaviour
             cd = kickCoolDown;
             kickHitBox.enabled = false;
             isKicking = false;
-        } else
+            animator.SetBool("isKicking", false);
+        }
+        else
         {
+            animator.SetBool("isKicking", true);
             kickHitBox.enabled = true;
         }
     }
