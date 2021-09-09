@@ -8,18 +8,19 @@ public class EnnemyLife : MonoBehaviour
     public Rigidbody rb;
     public BoxCollider enemyCollider;
     public BoxCollider meleeCollider;
-    public MeshRenderer meshRenderer;
     public EnemyDetector enemyDetector;
+
+    public SkinnedMeshRenderer mesh;
 
     public Score score;
    
    public void Awake()
    {
-       rb = GetComponent<Rigidbody>();
-       enemyCollider = GetComponent<BoxCollider>();
-       meleeCollider = transform.GetChild(0).GetComponent<BoxCollider>();
-       meshRenderer = GetComponent<MeshRenderer>();
-       enemyDetector = GetComponent<EnemyDetector>();
+        score = GameObject.FindGameObjectWithTag("Score").GetComponent<Score>();
+        rb = GetComponent<Rigidbody>();
+        enemyCollider = GetComponent<BoxCollider>();
+        meleeCollider = transform.GetChild(0).GetComponent<BoxCollider>();
+        enemyDetector = GetComponent<EnemyDetector>();
    }
    public void Die(int damage)
    {
@@ -29,14 +30,15 @@ public class EnnemyLife : MonoBehaviour
        {
             Debug.Log("EneMort");
             AudioManager.instance.Play("HitLeger");
-            enemyDetector.enabled = false;
-            rb.isKinematic = true;
-            enemyCollider.enabled = false;
-            meleeCollider.enabled = false;
-            meshRenderer.enabled = false;
+            //enemyDetector.enabled = false;
+            //rb.isKinematic = true;
+            //enemyCollider.enabled = false;
+            //meleeCollider.enabled = false;
+            //mesh.enabled = false;
             StopCoroutine(score.Combo());
             StartCoroutine(score.Combo());
             score.scoreValue += 10 * score.multiplier;
+            Destroy(gameObject);
         }
    }
     
