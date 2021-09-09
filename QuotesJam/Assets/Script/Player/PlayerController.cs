@@ -12,6 +12,8 @@ public class PlayerController : MonoBehaviour
     public float shakeDuration;
     public AnimationCurve shake;
 
+    public Animator anim;
+
     private float cd;
     private Collider kickHitBox;
     private Vector3 movement;
