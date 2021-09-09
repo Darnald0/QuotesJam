@@ -17,10 +17,10 @@ public class PlayerController : MonoBehaviour
     private float cd;
     [SerializeField] private Collider kickHitBox;
     private Vector3 movement;
-    public Rigidbody rb;
-    public CapsuleCollider playerCollider;
-    public MeshRenderer meshRenderer;
-    public Camera mainCamera;
+    [HideInInspector] public Rigidbody rb;
+    [HideInInspector] public CapsuleCollider playerCollider;
+    [HideInInspector] public MeshRenderer meshRenderer;
+    [HideInInspector] public Camera mainCamera;
     private bool isKicking = false;
     private float timeKickEnd;
     public static PlayerController instance;
@@ -77,7 +77,12 @@ public class PlayerController : MonoBehaviour
             if (cd <= 0)
             {
                 isKicking = true;
+<<<<<<< HEAD
                 AudioManager.instance.Play("KickLeger");
+=======
+                 SoundManager.Instance.PlaySFX("KickLeger");
+                
+>>>>>>> 3530eb6c4115cb12bcb54ce390caa06cae9ddebc
                 timeKickEnd = Time.time + kickDuration;
             }
         }
