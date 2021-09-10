@@ -8,6 +8,8 @@ TagManager:
   - Music
   - Score
   - Door
+  - PauseMenu
+  - DeathMenu
   layers:
   - Default
   - TransparentFX
