@@ -30,6 +30,19 @@ public class Kick : MonoBehaviour
             {
                 Debug.Log("touch");  
                 StartCoroutine(cameraShake.Shake(duration, shakeIntensity));
+                //Vector3 direction = other.transform.position - this.transform.position;
+                //direction.y = 0;
+                //enemyRigidBody.AddForce(direction.normalized * strength, ForceMode.VelocityChange);
+            }
+        }
+
+        if (other.tag == "Door")
+        {
+            Rigidbody enemyRigidBody = other.gameObject.GetComponent<Rigidbody>();
+            if (enemyRigidBody != null)
+            {
+                Debug.Log("touch");
+                StartCoroutine(cameraShake.Shake(duration, shakeIntensity));
                 Vector3 direction = other.transform.position - this.transform.position;
                 direction.y = 0;
                 enemyRigidBody.AddForce(direction.normalized * strength, ForceMode.VelocityChange);

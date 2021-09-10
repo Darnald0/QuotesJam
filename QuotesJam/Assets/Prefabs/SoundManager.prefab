@@ -215,7 +215,14 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 7863bb41eef013847b6c0e8e8f0e0eee, type: 3}
     volume: 0.5
     pitch: 1
-    loop: 0
+    loop: 1
+    CouldCrossfade: 0
+    source: {fileID: 0}
+  - name: MenuMusic
+    clip: {fileID: 8300000, guid: ac4459a4cecf2794eb289c1244ffaa96, type: 3}
+    volume: 0.2
+    pitch: 1
+    loop: 1
     CouldCrossfade: 0
     source: {fileID: 0}
   soundDecrease: 0.1

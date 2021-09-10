@@ -13,21 +13,27 @@ public class EnnemyLife : MonoBehaviour
     public SkinnedMeshRenderer mesh;
 
     public Score score;
+
+    private Animator animator;
+    private bool isDead = false;
    
    public void Awake()
    {
         score = GameObject.FindGameObjectWithTag("Score").GetComponent<Score>();
         rb = GetComponent<Rigidbody>();
         enemyCollider = GetComponent<BoxCollider>();
-        meleeCollider = transform.GetChild(0).GetComponent<BoxCollider>();
+        //meleeCollider = transform.GetChild(0).GetComponent<BoxCollider>();
         enemyDetector = GetComponent<EnemyDetector>();
+        animator = GetComponent<Animator>();
    }
    public void Die(int damage)
    {
        life -= damage;
 
-       if(life <= 0)
+       if(life <= 0 && !isDead)
        {
+            animator.SetBool("isDying", true);
+            isDead = true;
             Debug.Log("EneMort");
             AudioManager.instance.Play("HitLeger");
             //enemyDetector.enabled = false;
@@ -38,7 +44,12 @@ public class EnnemyLife : MonoBehaviour
             StopCoroutine(score.Combo());
             StartCoroutine(score.Combo());
             score.scoreValue += 10 * score.multiplier;
-            Destroy(gameObject);
+            //Destroy(gameObject);
+
+            enemyDetector.enabled = false;
+            enemyCollider.enabled = false;
+            meleeCollider.enabled = false;
+
         }
    }
     

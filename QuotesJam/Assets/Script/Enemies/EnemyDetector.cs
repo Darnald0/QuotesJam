@@ -16,12 +16,15 @@ public class EnemyDetector : MonoBehaviour
     public LayerMask player;
     public Rigidbody rb;
 
+    private Animator animator;
+
     void Start()
     {
         target = GameObject.FindGameObjectWithTag("Player");
         agent = GetComponent<NavMeshAgent>();
         player = LayerMask.GetMask("Player");
         rb = GetComponent<Rigidbody>();
+        animator = GetComponent<Animator>();
     }
 
     void FixedUpdate()
@@ -37,7 +40,8 @@ public class EnemyDetector : MonoBehaviour
 
         if(follow == true) //&& Vector3.Distance(transform.position, target.transform.position) >= 1
         {
-        
+
+            animator.SetBool("isRunning", true);
             agent.SetDestination(target.transform.position);
 
             if(PlayerHealth.instance.playerLife <= 0)
