@@ -45,7 +45,7 @@ public class EnnemyLife : MonoBehaviour
             StartCoroutine(score.Combo());
             score.scoreValue += 10 * score.multiplier;
             //Destroy(gameObject);
-
+            rb.constraints = RigidbodyConstraints.FreezeRotationY;
             enemyDetector.enabled = false;
             enemyCollider.enabled = false;
             meleeCollider.enabled = false;
