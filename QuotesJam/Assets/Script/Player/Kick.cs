@@ -41,7 +41,12 @@ public class Kick : MonoBehaviour
             Rigidbody enemyRigidBody = other.gameObject.GetComponent<Rigidbody>();
             if (enemyRigidBody != null)
             {
+<<<<<<< HEAD
                 Debug.Log("touch");
+                AudioManager.instance.Play("Destruction");
+=======
+                other.gameObject.GetComponent<Door>().isGettingKick = true;
+>>>>>>> main
                 StartCoroutine(cameraShake.Shake(duration, shakeIntensity));
                 Vector3 direction = other.transform.position - this.transform.position;
                 direction.y = 0;
