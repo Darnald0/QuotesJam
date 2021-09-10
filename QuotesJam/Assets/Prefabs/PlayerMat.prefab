@@ -868,7 +868,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 300
   limiter: 0.7
-  kickStrength: 10
+  kickStrength: 50
   kickCoolDown: 0.2
   kickDuration: 0.6
   shakeDuration: 0.5

@@ -278,6 +278,7 @@ MonoBehaviour:
   detectionPlayer: 0
   damage: 1
   fightAfterTime: 3
+  animator: {fileID: 5431011180173139126}
 --- !u!1 &1512795193070120979
 GameObject:
   m_ObjectHideFlags: 0
@@ -388,7 +389,7 @@ Animator:
   m_GameObject: {fileID: 1654280788858412150}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: fa32460433da4624880caf50f3844faa, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8a3efd3e63c1ee640965685019c9d58e, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
