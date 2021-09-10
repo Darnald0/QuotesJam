@@ -50,10 +50,13 @@ public class AudioManager : MonoBehaviour
 
     public void Update()
     {
-        generaleVolume = settingsMenu.volumeGenerale;
-        foreach (Sound s in sounds)
-        {
-            s.source.volume = s.volume * generaleVolume;
+        if(settingsMenu != null)
+        { 
+            generaleVolume = settingsMenu.volumeGenerale;
+            foreach (Sound s in sounds)
+            {
+                s.source.volume = s.volume * generaleVolume;
+            }
         }
     }
 
