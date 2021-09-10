@@ -42,6 +42,7 @@ public class Kick : MonoBehaviour
             if (enemyRigidBody != null)
             {
                 Debug.Log("touch");
+                AudioManager.instance.Play("Destruction");
                 StartCoroutine(cameraShake.Shake(duration, shakeIntensity));
                 Vector3 direction = other.transform.position - this.transform.position;
                 direction.y = 0;
