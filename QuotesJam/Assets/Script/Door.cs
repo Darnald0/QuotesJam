@@ -16,6 +16,7 @@ public class Door : MonoBehaviour
     }
     private void Update()
     {
+        Debug.Log(rb.velocity.magnitude);
         if (rb.velocity.magnitude <= 0)
         {
             isGettingKick = false;
@@ -26,9 +27,10 @@ public class Door : MonoBehaviour
             col.enabled = false;
         }
     }
+
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Enemy")
+        if (collision.gameObject.tag == "Enemy" && isGettingKick)
         {
             EnnemyLife ennemy = collision.gameObject.GetComponent<EnnemyLife>();
             ennemy.Die(1);
