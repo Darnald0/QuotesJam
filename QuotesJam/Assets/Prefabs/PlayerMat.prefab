@@ -868,27 +868,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 300
   limiter: 0.7
-  kickStrength: 50
+  kickStrength: 100
   kickCoolDown: 0.2
   kickDuration: 0.6
-  shakeDuration: 0.5
+  shakeDuration: 0.3
   shake:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: -0.016670227
-      value: 1.0070724
-      inSlope: -0.006956483
-      outSlope: -0.006956483
+      time: 0.03968811
+      value: 1.0022049
+      inSlope: -0.09746432
+      outSlope: -0.09746432
       tangentMode: 34
       weightedMode: 0
       inWeight: 0
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: -0.006956483
-      outSlope: -0.006956483
+      time: 5.04489
+      value: 0.5143763
+      inSlope: -0.055348627
+      outSlope: -0.055348627
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 47.041233
+      value: -0.0413585
+      inSlope: -0.013232932
+      outSlope: -0.013232932
       tangentMode: 34
       weightedMode: 0
       inWeight: 0.33333334

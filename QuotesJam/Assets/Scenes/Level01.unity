@@ -14590,10 +14590,6 @@ PrefabInstance:
       propertyPath: mainCamera
       value: 
       objectReference: {fileID: 1549525642}
-    - target: {fileID: 4780640321602062814, guid: 6a9cd7ee5ee63fb468b2c1fb059a7035, type: 3}
-      propertyPath: kickStrength
-      value: 50
-      objectReference: {fileID: 0}
     - target: {fileID: 5031231576637121593, guid: 6a9cd7ee5ee63fb468b2c1fb059a7035, type: 3}
       propertyPath: m_RootOrder
       value: 3
