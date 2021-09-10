@@ -9,16 +9,13 @@ public class PauseMenu : MonoBehaviour
 
     public void Start()
     {
-        print("La scene a ete charge.");
-        
-
+        print("La scene � �t� charg�.");
     }
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            
             if (gameIsPaused)
             {
                 Resume();
@@ -34,7 +31,6 @@ public class PauseMenu : MonoBehaviour
     private void Paused()
     {
         //PlayerMovement.instance.enabled = false;
-        
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0;
         gameIsPaused = true;
@@ -43,7 +39,6 @@ public class PauseMenu : MonoBehaviour
     public void Resume()
     {
         //PlayerMovement.instance.enabled = true;
-        
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1;
         gameIsPaused = false;
@@ -63,6 +58,5 @@ public class PauseMenu : MonoBehaviour
         SceneManager.LoadScene("MainMenu");
         AudioManager.instance.Play("BgMusic");
         AudioManager.instance.Stop("MenuMusic");
-        
     }
 }
