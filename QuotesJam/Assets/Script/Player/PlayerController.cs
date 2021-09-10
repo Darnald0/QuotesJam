@@ -72,21 +72,27 @@ public class PlayerController : MonoBehaviour
 
         cd -= Time.deltaTime;
 
-        if (Input.GetMouseButtonDown(0))
+        if(!isKicking && cd <= 0)
         {
-            if (cd <= 0)
+
+            if (Input.GetMouseButtonDown(0))
             {
+                if (cd <= 0)
+                {
                 isKicking = true;
 
-                AudioManager.instance.Play("KickLeger");
-
                 timeKickEnd = Time.time + kickDuration;
+                }
+                AudioManager.instance.Play("KickLeger");
             }
+
         }
 
         if (isKicking)
         {
             Kick();
+            
+
         }
 
         Ray cameraRay = mainCamera.ScreenPointToRay(Input.mousePosition);
@@ -105,8 +111,10 @@ public class PlayerController : MonoBehaviour
 
     private void Kick()
     {
+
         if (Time.time > timeKickEnd)
         {
+            
             cd = kickCoolDown;
             kickHitBox.enabled = false;
             isKicking = false;
@@ -114,6 +122,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
+            
             animator.SetBool("isKicking", true);
             kickHitBox.enabled = true;
         }

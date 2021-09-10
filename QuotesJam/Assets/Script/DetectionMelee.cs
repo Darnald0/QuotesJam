@@ -9,6 +9,9 @@ public class DetectionMelee : MonoBehaviour
     public int damage = 1;
     private DateTime nextDamage;
     public float fightAfterTime;
+
+    public Animator animator;
+
     void Start()
     {
         nextDamage = DateTime.Now;
@@ -19,6 +22,7 @@ public class DetectionMelee : MonoBehaviour
     {
         if(detectionPlayer == true)
         {
+            animator.SetBool("isPunching", true);
             FightInDetection();
         }
     }
@@ -35,6 +39,7 @@ public class DetectionMelee : MonoBehaviour
     {
         if(other.tag == "Player")
         {
+            animator.SetBool("isPunching", false);
             detectionPlayer = false;
         }
     }
