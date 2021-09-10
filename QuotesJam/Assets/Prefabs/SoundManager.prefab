@@ -225,5 +225,7 @@ MonoBehaviour:
     loop: 1
     CouldCrossfade: 0
     source: {fileID: 0}
+  settingsMenu: {fileID: 0}
   soundDecrease: 0.1
   musicPlayingName: 
+  generaleVolume: 1

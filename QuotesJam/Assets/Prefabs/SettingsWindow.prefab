@@ -889,7 +889,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7420564298328894107}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: SettingsMenu, Assembly-CSharp
         m_MethodName: SetResolution
         m_Mode: 0
@@ -1317,7 +1317,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  m_IsOn: 0
+  m_IsOn: 1
 --- !u!1 &7420564297928088742
 GameObject:
   m_ObjectHideFlags: 0
@@ -1610,6 +1610,7 @@ MonoBehaviour:
   audioMixer: {fileID: 24100000, guid: 8041aabd2a7a4dc479e515ec84effab2, type: 2}
   resolutionDropDown: {fileID: 7420564297391203876}
   settingsWindow: {fileID: 7420564298328894111}
+  volumeGenerale: 1
 --- !u!1 &7420564298459396222
 GameObject:
   m_ObjectHideFlags: 0
