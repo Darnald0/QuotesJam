@@ -9,7 +9,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Start()
     {
-        print("La scene à été chargé.");
+        print("La scene ï¿½ ï¿½tï¿½ chargï¿½.");
     }
 
     private void Update()
@@ -56,5 +56,7 @@ public class PauseMenu : MonoBehaviour
     {
         Resume();
         SceneManager.LoadScene("MainMenu");
+        AudioManager.instance.Play("BgMusic");
+        AudioManager.instance.Stop("MenuMusic");
     }
 }

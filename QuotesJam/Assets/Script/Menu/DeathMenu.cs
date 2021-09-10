@@ -21,6 +21,8 @@ public class DeathMenu : MonoBehaviour
     public void MainMenuButton()
     {
         SceneManager.LoadScene("MainMenu");
+        AudioManager.instance.Play("BgMusic");
+        AudioManager.instance.Stop("MenuMusic");
     }
 
     public void QuitButton()

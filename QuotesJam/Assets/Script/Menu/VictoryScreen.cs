@@ -8,13 +8,15 @@ public class VictoryScreen : MonoBehaviour
 
     public GameObject gameUI;
 
-    public void Update() //remettre nom de void pour victoire
+    public void VictoryCondition() //remettre nom de void pour victoire
     {
-        if (Input.GetKeyDown(KeyCode.V))
+        /*if (Input.GetKeyDown(KeyCode.V))
         {
-            gameUI.SetActive(false);
-            // condition de victoire = mort de tout les ennemies
-            victoryScreen.SetActive(true);
-        }
+            
+        }*/
+
+        gameUI.SetActive(false);
+        // condition de victoire = mort de tout les ennemies
+        victoryScreen.SetActive(true);
     }
 }

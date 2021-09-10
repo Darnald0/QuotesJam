@@ -9,9 +9,13 @@ public class AudioManager : MonoBehaviour
 {
     public Sound[] sounds;
 
+    public SettingsMenu settingsMenu;
+
     public static AudioManager instance;
     public float soundDecrease = 0.1f;
     public string musicPlayingName;
+
+    public float generaleVolume;
 
     private void Awake()
     {
@@ -32,7 +36,7 @@ public class AudioManager : MonoBehaviour
             s.source = gameObject.AddComponent<AudioSource>();
             s.source.clip = s.clip;
 
-            s.source.volume = s.volume;
+            s.source.volume = s.volume * generaleVolume;
             s.source.pitch = s.pitch;
             s.source.loop = s.loop;
             
@@ -42,6 +46,15 @@ public class AudioManager : MonoBehaviour
     private void Start()
     {
         Play("MenuMusic");
+    }
+
+    public void Update()
+    {
+        generaleVolume = settingsMenu.volumeGenerale;
+        foreach (Sound s in sounds)
+        {
+            s.source.volume = s.volume * generaleVolume;
+        }
     }
 
 
