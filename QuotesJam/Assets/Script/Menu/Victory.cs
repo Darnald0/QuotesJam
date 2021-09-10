@@ -11,6 +11,8 @@ public class Victory : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             victoryScreen.VictoryCondition();
+            AudioManager.instance.Stop("BgMusic");
+            AudioManager.instance.Play("Victory");
         }
     }
 }
